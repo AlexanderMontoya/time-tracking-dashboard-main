@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-user: rgb(88, 71, 235);
+    --color-veryDarkBlue: rgb(15, 20, 36);
+    --color-darkBlue: rgb(28, 31, 74);
+    --color-desatureBlue:rgb(111, 118, 200);
+    --color-paleBlue:rgb(189, 193, 255);
+
+    --color-work: rgb(255, 140, 102);
+    --color-play: hsl(195, 74%, 62%);
+    --color-study: hsl(348, 100%, 68%);
+    --color-exercise: hsl(145, 58%, 55%);
+    --color-social: hsl(264, 64%, 52%);
+    --color-selfCare: hsl(43, 84%, 65%);
+}
+
+body{
+    background-color: var(--color-veryDarkBlue);
+    font-family: 'Rubik', sans-serif;
+}
+
+.conteiner__APP{
+    width: 100%;
+    padding-top: 150px;
+}
+
+.app{
+    width: 65%;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+}
+
+.conteiner__user{
+    /* grid-area: user; */
+    width: 25%;
+    color: white;
+    background-color: var(--color-darkBlue);
+    border-radius: 20px;
+}
+
+.user{
+    width: 100%;
+    background-color: var(--color-user);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.user__image{
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 30px;
+}
+
+.user__description{
+    margin-bottom: 70px;
+}
+
+.user p{
+    color: var(--color-paleBlue);
+}
+
+.user__name{
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.user__buttons{
+    width: 100%;
+    padding: 25px;
+    padding-top: 10px;
+}
+
+.user__btn{
+    list-style: none;
+    margin-top: 15px;
+}
+
+.user__btn button{
+    color: var(--color-desatureBlue);
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user__btn.active button{
+    color: var(--color-paleBlue);
+}
+
+.user__btn button:hover{
+    color: var(--color-paleBlue);
+}
+
+/*Tasks*/
+
+.conteiner__tasks{
+    /* grid-area: task; */
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.task{
+    border-radius: 15px;
+    transition: transform 1s;
+}
+
+.task:hover{
+    transform: translateY(-10px);
+}
+
+.task__image{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+
+.task__img{
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    width: 70px;
+}
+
+.card__task{
+    background-color: var(--color-darkBlue);
+    width: 100%;
+    height: calc(100% - 39px);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+}
+
+
+.card__title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ellipsis{
+    font-size: 20px;
+    color: var(--color-paleBlue);
+    cursor: pointer;
+}
+
+.ellipsis:hover{
+    color: white;
+}
+
+.card__title h2{
+    font-size: 18px;
+}
+
+.card__hours{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.card__previous{
+    color: var(--color-paleBlue);
+}
+
+.work{
+    background-color: var(--color-work);
+}
+.play{
+    background-color: var(--color-play);
+}
+.study{
+    background-color: var(--color-study);
+}
+.exercise{
+    background-color: var(--color-exercise);
+}
+.social{
+    background-color: var(--color-social);
+}
+.self.care{
+    background-color: var(--color-selfCare);
+}
+
+.attribution {
+    width: 100%;
+    padding: 20px;
+    font-size: 11px;
+    text-align: center; 
+    color: white;
+    background-color: transparent;
+    border-top: 2px solid white;
+    font-size: 16px;
+}
+.attribution a { color: white; }
+
+@media only screen and (max-width: 1140px){
+    .app{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 930px){
+    .app{
+        flex-direction: column;
+    }
+
+    .conteiner__tasks{
+        width: 100%;
+    }
+
+    .conteiner__user{
+        width: 100%;
+    }
+
+    .user{
+        display: flex;
+        align-items: center;
+    }
+
+    .user__image{
+        margin: 0px;
+        margin-right: 20px;
+    }
+
+    .user__description{
+        margin: 0px;
+    }
+
+    .user__buttons{
+        padding: 20px 25px;
+    }
+
+    .user__buttons ul{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .user__btn{
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width:720px){
+    .conteiner__tasks{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .conteiner__APP{
+        padding-top: 100px;
+    }
+    .user__name{
+        font-size: 30px;
+    }
+    .conteiner__tasks{
+        grid-template-columns: 1fr;
+    }
+    .card__task{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card__title{
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .card__hours{
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width:376px){
+    .card__hours{
+        font-size: 35px;
+    }
+}
