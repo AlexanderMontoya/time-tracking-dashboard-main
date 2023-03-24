@@ -22,15 +22,19 @@
 body{
     background-color: var(--color-veryDarkBlue);
     font-family: 'Rubik', sans-serif;
+    height: 100vh;
 }
 
 .conteiner__APP{
     width: 100%;
-    padding-top: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .app{
-    width: 65%;
+    width: 70%;
     display: flex;
     gap: 20px;
     margin: auto;
@@ -203,6 +207,12 @@ body{
 }
 .attribution a { color: white; }
 
+@media only screen and (min-width: 1730px){
+    .app{
+        width: 40%;
+    }
+}
+
 @media only screen and (max-width: 1140px){
     .app{
         width: 80%;
@@ -210,6 +220,14 @@ body{
 }
 
 @media only screen and (max-width: 930px){
+    body{
+        height: auto;
+    }
+
+    .conteiner__APP{
+        padding: 100px 0px;
+    }
+
     .app{
         flex-direction: column;
     }
