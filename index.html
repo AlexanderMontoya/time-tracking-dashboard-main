@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Time tracking dashboard</title>
   <!-- Typography -->
@@ -19,94 +17,29 @@
   <script src="https://kit.fontawesome.com/3783c670b9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="conteiner__APP" id="conteiner__APP">
+  <main class="conteiner__APP" id="conteiner__APP">
     <div class="app" id="App">
-      <div class="conteiner__user">
-        <div class="user">
+      <section class="conteiner__user">
+        <article class="user">
           <img src="images/image-jeremy.png" class="user__image" alt="" width="100">
           <div class="user__description">
             <p>Report for</p>
             <h1 class="user__name">Jeremy Robson</h1>
           </div>  
-        </div>
-        <div class="user__buttons">
+        </article>
+        <nav class="user__buttons">
           <ul>
-            <li class="user__btn"><button href="#" onclick="viewTasks('daily')">Daily</button></li>
-            <li class="user__btn active"><button href="#" onclick="viewTasks('weekly')">Weekly</button></li>
-            <li class="user__btn"><button href="#" onclick="viewTasks('monthly')">Monthly</button></li>
+            <li class="user__btn"><button onclick="viewTasks('daily')">Daily</button></li>
+            <li class="user__btn active"><button onclick="viewTasks('weekly')">Weekly</button></li>
+            <li class="user__btn"><button onclick="viewTasks('monthly')">Monthly</button></li>
           </ul>
-        </div>
-      </div>
-      <div class="conteiner__tasks" id="conteiner__tasks">
-        <!-- <div class="task work">
-          <div class="task__image">
-            <img class="task__img" src="images/icon-work.svg" alt="" width="100">
-          </div>
-          <div class="card__task">
-            <div class="card__title"><h2>Work</h2><div class="ellipsis fa-solid fa-ellipsis"></div></div>
-            <div class="card__hours"><p>32hrs</p></div>
-            <div class="card__previous"><p>Last Week - 36 hrs</p></div>
-          </div>
-        </div>
-        <div class="task play">
-          <div class="task__image">
-            <img class="task__img" src="images/icon-play.svg" alt="" width="100">
-          </div>
-          <div class="card__task">
-            <div class="card__title"><h2>Play</h2><div class="ellipsis fa-solid fa-ellipsis"></div></div>
-            <div class="card__hours"><p>10hrs</p></div>
-            <div class="card__previous"><p>Last Week - 8 hrs</p></div>
-          </div>
-        </div>
-        <div class="task study">
-          <div class="task__image">
-            <img class="task__img" src="images/icon-study.svg" alt="" width="100">
-          </div>
-          <div class="card__task">
-            <div class="card__title"><h2>Study</h2><div class="ellipsis fa-solid fa-ellipsis"></div></div>
-            <div class="card__hours"><p>4hrs</p></div>
-            <div class="card__previous"><p>Last Week - 7 hrs</p></div>
-          </div>
-        </div>
-        <div class="task exercise">
-          <div class="task__image">
-            <img class="task__img" src="images/icon-exercise.svg" alt="" width="100">
-          </div>
-          <div class="card__task">
-            <div class="card__title"><h2>Exercise</h2><div class="ellipsis fa-solid fa-ellipsis"></div></div>
-            <div class="card__hours"><p>4hrs</p></div>
-            <div class="card__previous"><p>Last Week - 5 hrs</p></div>
-          </div>
-        </div>
-        <div class="task social">
-          <div class="task__image">
-            <img class="task__img" src="images/icon-social.svg" alt="" width="100">
-          </div>
-          <div class="card__task">
-            <div class="card__title"><h2>Social</h2><div class="ellipsis fa-solid fa-ellipsis"></div></div>
-            <div class="card__hours"><p>5hrs</p></div>
-            <div class="card__previous"><p>Last Week - 10 hrs</p></div>
-          </div>
-        </div>
-        <div class="task selfCare">
-          <div class="task__image">
-            <img class="task__img" src="images/icon-self-care.svg" alt="" width="100">
-          </div>
-          <div class="card__task">
-            <div class="card__title"><h2>Self Care</h2><div class="ellipsis fa-solid fa-ellipsis"></div></div>
-            <div class="card__hours"><p>2hrs</p></div>
-            <div class="card__previous"><p>Last Week - 2 hrs</p></div>
-          </div>
-        </div> -->
-      </div>
+        </nav>
+      </section>
+      <section class="conteiner__tasks" id="conteiner__tasks">
+        
+      </section>
     </div>  
-  </div>
-  
-  <!-- <br><br><br><br><br><br>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/AlexanderMontoya">Alexander Montoya</a>.
-  </div> -->
+  </main>
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>

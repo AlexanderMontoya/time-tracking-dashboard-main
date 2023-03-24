@@ -41,7 +41,6 @@ body{
 }
 
 .conteiner__user{
-    /* grid-area: user; */
     width: 25%;
     color: white;
     background-color: var(--color-darkBlue);
@@ -106,7 +105,6 @@ body{
 /*Tasks*/
 
 .conteiner__tasks{
-    /* grid-area: task; */
     width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
